@@ -12,4 +12,13 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
+ *= require animate
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+    background-color: black;
+}
