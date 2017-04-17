@@ -122,6 +122,8 @@ span{
   background: black;
 }
 
+
+/*styling for the first block of content on the page*/
 .main-block{
     margin-top: 200px;
 }
@@ -134,8 +136,28 @@ span{
 }
 
 .socials{
-  margin-left: 100px;
+  margin-left: 150px;
 }
+.content-landing{
+  height: 700px;
+  width: 100%;
+}
+
+
+/*styling for the portfolio section*/
+
+.portfolio-content{
+  margin-top: 200px;
+  background-color: white;
+}
+
+.portfolio-photos{
+  height: 300px;
+  width: 500px;
+}
+
+
+
 
 
 
