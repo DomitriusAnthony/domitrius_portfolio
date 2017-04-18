@@ -1,4 +1,4 @@
-<body ng-controller="ProjectController as project">
+
 <div class="row">
 	<div class="content-landing">
 
@@ -8,13 +8,10 @@
 	<div class="col-md-4">
 		<div class="monitor">
 			<div class="main-block">
-				<img class="animated bounceInLeft photo" src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/13333015_1010769929036242_3981160821011493017_n.jpg?oh=802e190b3f2aeb0f4f61cf85891ddbbc&oe=594DE357" style="width:400px; height: 400px;">
+				<img class="animated bounceInLeft photo" src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/13333015_1010769929036242_3981160821011493017_n.jpg?oh=802e190b3f2aeb0f4f61cf85891ddbbc&oe=594DE357" style="width:400px; height: 400px; display: block; margin: 0 auto;">
 				
 				<h1 class="name">< Domitrius A. Clark /><span class="marker">|</span> </h1>
-					<div class="socials">
-					<a href="https://www.linkedin.com/in/domitrius-anthony/"><i class="fa fa-linkedin-square fa-5x" style="color: #007bb5;"; aria-hidden="true"></i></a>
-					<a href="https://github.com/DomitriusAnthony"><i class="fa fa-github fa-5x" style="color: white;" aria-hidden="true"></i></a>
-					</div>
+
 			</div>
 		</div>
 	</div>
@@ -24,66 +21,74 @@
 	</div>
 
 	</div>
-
-
 	<div class="col-md-12">
 		<div class="portfolio-content">
 			<div class="list-group">
-			      <div class="list-group-item" ng-repeat="website in project.websites">
-			        <h3>{{website.name}} </h3>
-			        <div ng-controller="GalleryController as gallery"  ng-show="product.images.length">
-			          <div class="img-wrap">
-			            <img ng-src="{{product.images[gallery.current]}}" />
-			          </div>
-			          <ul class="img-thumbnails clearfix">
-			            <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
-			              <img ng-src="{{image}}" />
-			            </li>
-			          </ul>
-			        </div>
+			      <div class="list-group-item col-md-6" ng-repeat="project in portfolio.projects">
+			        <h3 style="text-align: center;">{{project.name}} </h3>
+			        <img ng-src="{{project.image}}" style="width: 300px; width: 500px; display: block; margin: 0 auto; margin-bottom: 20px;" />
+			        <hr>
 			        <section ng-controller="TabController as tab">
 			          <ul class="nav nav-pills">
 			            <li ng-class="{ active:tab.isSet(1) }">
 			              <a href="" ng-click="tab.setTab(1)">Description</a>
 			            </li>
 			            <li ng-class="{ active:tab.isSet(2) }">
-			              <a href="" ng-click="tab.setTab(2)">Specs</a>
+			              <a href="" ng-click="tab.setTab(2)">Links</a>
 			            </li>
 			            <li ng-class="{ active:tab.isSet(3) }">
-			              <a href="" ng-click="tab.setTab(3)">Reviews</a>
+			              <a href="" ng-click="tab.setTab(3)">Preview</a>
 			            </li>
 			          </ul>
+
+			         <!--  Tab 1 for name and description of the project -->
 			          <div ng-show="tab.isSet(1)">
-			            <h4>Description</h4>
-			            <blockquote>{{product.description}}</blockquote>
+			            <blockquote>
+			            	{{project.description}}
+			            </blockquote>
 			          </div>
+			          
+			          <!-- Tab 2 for links to websites of project -->
 			          <div ng-show="tab.isSet(2)">
-			            <h4>Specs</h4>
-			            <blockquote>Shine: {{product.shine}}</blockquote>
+			            <blockquote>
+			            	<a href="{{project.link1}}"><p>Live Website</p></a>
+			            	<a href="{{project.link2}}"><p>Github</p></a>
+			            </blockquote>
 			          </div>
 
-			          <!--  Review Tab's Content  -->
+			          <!-- Tab 3 for screen recording -->
 			          <div ng-show="tab.isSet(3)">
-			            <!--  Product Reviews List -->
-			            <ul>
-			              <h4>Reviews</h4>
-			              <li>
-			                <blockquote>
-			                  <strong> Stars</strong>
-			                  
-			                  <cite class="clearfix">—</cite>
-			                </blockquote>
-			              </li>
-			            </ul>
+			          	<video width="320" height="240" controls>
+  							<source src="" type="video/mp4">
+						</video>
+
 			          </div>
 
 			        </section>
 			      </div>
-			    </div>
-    		</div>
-    </div>	
+			 </div>    		
+		</div>
+   	</div>	
+
+   	<div class="col-md-6">
+   		<form id="form" class="topBefore">
+   			<input id="name" type="text" placeholder="NAME">
+			<input id="email" type="text" placeholder="E-MAIL">
+		 	<textarea id="message" type="text" placeholder="Introduce yourself and your business so we can make your ideas real!"></textarea>
+ 			<input id="submit" type="submit" value="GO!" style="max-width: 470px;">
+ 		</form>
+   	</div>
+
+   	<div class="col-md-6">
+   		<div class="socials">
+			<a href="https://www.linkedin.com/in/domitrius-anthony/"><i class="fa fa-linkedin-square fa-5x" style="color: #007bb5;"; aria-hidden="true"></i></a>
+			<a href="https://github.com/DomitriusAnthony"><i class="fa fa-github fa-5x" style="color: white;" aria-hidden="true"></i></a>
+		</div>
+   	</div>
+
+
 
 
 </div>
-</body>
+
 

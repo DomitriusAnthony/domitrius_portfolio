@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="portfolioProject">
+<html ng-app="portfolio">
   <head>
     <title>Portfolio</title>
     <%= csrf_meta_tags %>
@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body ng-controller="PortfolioController as portfolio">
 <nav>
   <div class="navbar navbar-fixed-top navbar-right" role="navigation">
       <div class="container">
@@ -31,7 +31,7 @@
 
             <li>
               <a href="/portfolio" >
-                    Portfolio
+                    Projects
               </a>
             </li>
             
