@@ -1,3 +1,4 @@
+<body ng-controller="ProjectController as project">
 <div class="row">
 	<div class="content-landing">
 
@@ -24,22 +25,65 @@
 
 	</div>
 
-	<div class="portfolio-content">
-	
-	<div class="col-md-6">
-		<div class="">
-			<img class="portfolio-photos" src="/assets/pressstart.png">
-		</div>
-	</div>
-	
-	<div class="col-md-6">
-		
-	</div>
 
+	<div class="col-md-12">
+		<div class="portfolio-content">
+			<div class="list-group">
+			      <div class="list-group-item" ng-repeat="website in project.websites">
+			        <h3>{{website.name}} </h3>
+			        <div ng-controller="GalleryController as gallery"  ng-show="product.images.length">
+			          <div class="img-wrap">
+			            <img ng-src="{{product.images[gallery.current]}}" />
+			          </div>
+			          <ul class="img-thumbnails clearfix">
+			            <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+			              <img ng-src="{{image}}" />
+			            </li>
+			          </ul>
+			        </div>
+			        <section ng-controller="TabController as tab">
+			          <ul class="nav nav-pills">
+			            <li ng-class="{ active:tab.isSet(1) }">
+			              <a href="" ng-click="tab.setTab(1)">Description</a>
+			            </li>
+			            <li ng-class="{ active:tab.isSet(2) }">
+			              <a href="" ng-click="tab.setTab(2)">Specs</a>
+			            </li>
+			            <li ng-class="{ active:tab.isSet(3) }">
+			              <a href="" ng-click="tab.setTab(3)">Reviews</a>
+			            </li>
+			          </ul>
+			          <div ng-show="tab.isSet(1)">
+			            <h4>Description</h4>
+			            <blockquote>{{product.description}}</blockquote>
+			          </div>
+			          <div ng-show="tab.isSet(2)">
+			            <h4>Specs</h4>
+			            <blockquote>Shine: {{product.shine}}</blockquote>
+			          </div>
 
-	</div>
+			          <!--  Review Tab's Content  -->
+			          <div ng-show="tab.isSet(3)">
+			            <!--  Product Reviews List -->
+			            <ul>
+			              <h4>Reviews</h4>
+			              <li>
+			                <blockquote>
+			                  <strong> Stars</strong>
+			                  
+			                  <cite class="clearfix">—</cite>
+			                </blockquote>
+			              </li>
+			            </ul>
+			          </div>
 
-
+			        </section>
+			      </div>
+			    </div>
+    		</div>
+    </div>	
 
 
 </div>
+</body>
+
