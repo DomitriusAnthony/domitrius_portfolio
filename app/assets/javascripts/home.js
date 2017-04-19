@@ -28,14 +28,15 @@
 		link1: "www.pressstart.herokuapp.com",
 		link2: "www.github.com/DomitriusAnthony/pressstart",
 		recording: "../assets/pressstart-recording.mp4"
-		}, 
-	{
-		name: "School'd",
-		description: "School'd is targeted for middle school level kids to complete multiple challenges to learn the basic HTML & CSS setup for a page. By the end of the challenges they will have a fully fleshed out profile page, created by them. The challenges are JS DOM-manipulation which store in the database. ",
-		image: "../assets/schoold.png",
-		link1: "www.schoold.herokuapp.com",
-		link2: "www.github.com/DomitriusAnthony/schoold",
-		recording: "../assets/schoold-recording.mp4"
-	}
+	 	}
+	//, 
+	// {
+	// 	name: "School'd",
+	// 	description: "School'd is targeted for middle school level kids to complete multiple challenges to learn the basic HTML & CSS setup for a page. By the end of the challenges they will have a fully fleshed out profile page, created by them. The challenges are JS DOM-manipulation which store in the database. ",
+	// 	image: "../assets/schoold.png",
+	// 	link1: "www.schoold.herokuapp.com",
+	// 	link2: "www.github.com/DomitriusAnthony/schoold",
+	// 	recording: "../assets/schoold-recording.mp4"
+	// }
 	]
 })();
