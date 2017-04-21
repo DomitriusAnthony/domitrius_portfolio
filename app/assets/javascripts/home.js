@@ -25,7 +25,7 @@
 		name: 'PressStart',
 		description: "PressStart is a social platform for gamers and content creators to connect and build their following. This app allows users to signup/login through Devise, upload images with Paperclip & AWS s3, make posts/comments, follow/unfollow other users, and chat in real time using Websockets/Action Cable and Redis.",
 		image: "../assets/pressstart.png",
-		link1: "https://www.pressstart.herokuapp.com",
+		link1: "https://pressstart.herokuapp.com/",
 		link2: "https://www.github.com/DomitriusAnthony/pressstart",
 		recording: "../assets/pressstart-recording.mp4"
 	 	}
