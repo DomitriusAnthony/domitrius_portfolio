@@ -83,13 +83,13 @@ body{
 .name{
   color: lime; 
   font-family: "Courier";
-  font-size: 90px;
+  font-size: 6.3em;
   margin: 10px 0 0 10px;
   white-space: nowrap;
   overflow: hidden;
   width: 30em;
   animation: type 4s steps(60, end); 
-  margin-top: 350px;
+  margin-top: 50px;
   margin-left: 100px;
 }
 
@@ -134,19 +134,16 @@ span{
 
 
 /*styling for the first block of content on the page*/
-.main-block{
-    margin-top: 200px;
+.monitor{
+  padding-top: 200px;
 }
 .name{
     margin-left: 100px;
 }
 
-.photo{
-    border-radius: 30px;
-}
 
 .content-landing{
-  height: 800px;
+  height: 600px;
   width: 100%;
   background-color: black;
 }
