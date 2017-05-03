@@ -112,6 +112,15 @@ body{
   .about {
     text-align: center;
   }
+
+  .list-group-item {
+    position: fixed;
+    margin: 0 auto;
+  }
+
+  .socials{
+    margin-left: 280px;
+  }
   
 }
 
@@ -171,8 +180,8 @@ span{
 }
 /*styling for the portfolio section*/
 
-.portfolio-content{
-  height: 800px;
+#third-block {
+  height: 820px;
   width: 100%;
   background: black;
 }
@@ -200,9 +209,8 @@ span{
 }
 
 .socials{
-  margin-left: 400px;
   display: inline-block;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .icon{
