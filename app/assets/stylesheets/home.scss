@@ -83,7 +83,7 @@ body{
 .name{
   color: lime; 
   font-family: "Courier";
-  font-size: 6.3em;
+  font-size: 90px;
   margin: 10px 0 0 10px;
   white-space: nowrap;
   overflow: hidden;
@@ -93,6 +93,7 @@ body{
   margin-left: 100px;
 }
 
+
 .about{
   color: lime; 
   font-family: "Courier";
@@ -100,10 +101,19 @@ body{
   margin: 10px 0 0 10px;
   white-space: nowrap;
   overflow: hidden;
-  width: 30em; 
-  margin-left: 500px;
+  text-align: center;
 }
 
+@media screen and (max-device-width: 640px){
+  .big-name {
+    font-size: 55px;
+    margin-left: 100px;
+  }
+  .about {
+    text-align: center;
+  }
+  
+}
 
 h1 a{
   color: lime;
@@ -137,9 +147,7 @@ span{
 .monitor{
   padding-top: 200px;
 }
-.name{
-    margin-left: 100px;
-}
+
 
 
 .content-landing{
